@@ -35,7 +35,7 @@ export function DetailMovie() {
             <img src={imgUrl} className="img-fluid imagenPeli" alt="" />
           </div>
           <div className="col-lg-7 mt-4 mt-lg-0">
-            <div className="content-detail">
+            <div className="content-detail ">
               <h2>{movie.title}</h2>
               <p>{movie.overview}</p>
               <p>
@@ -43,11 +43,11 @@ export function DetailMovie() {
                 ratione quibusdam saepe rerum non expedita vitae vero.
                 Distinctio doloremque nesciunt enim neque blanditiis?
               </p>
-              <div className="d-flex text-center">
-                <h5>{genero.length > 1 ? "Generos:" : "Genero:"}</h5>
+              <h5>{genero.length > 1 ? "Generos:" : "Genero:"}</h5>
+              <div className="d-flex flex-wrap justify-content-center justify-content-lg-start text-center">
                 {genero.map((item, key) => (
                   <div key={item.id}>
-                    <span className="badge bg-info ms-2 p-2">{item.name}</span>
+                    <span className="badge bg-info ms-1 p-2">{item.name}</span>
                   </div>
                 ))}
               </div>
