@@ -1,7 +1,7 @@
 .card {
   /* width: 300px; */
   height: 500px !important;
-  background-color: red;
+  // background-color: red;
   border-radius: 15px;
   background-size: cover;
   background-position: center center;
@@ -10,7 +10,7 @@
 
 @media (max-width: 576px) {
   .card {
-    height: 600px !important;
+    height: 550px !important;
   }
 }
 .content-info {
