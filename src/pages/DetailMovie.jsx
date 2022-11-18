@@ -10,10 +10,14 @@ export function DetailMovie() {
   //   const imgUrl = "https://image.tmdb.org/t/p/w500";
 
   const [movie, setMovie] = useState([]);
+  // para acceder al genero
+  const [genero, setGenero] = useState([]);
   useEffect(() => {
     // obtenemos el detalle pasando el path con el id
     get("/movie/" + movieId).then((data) => {
       setMovie(data);
+      setGenero(data.genres);
+      // console.log(data.genres);
     });
   }, [movieId]);
   console.log(movie);
@@ -26,13 +30,28 @@ export function DetailMovie() {
       style={{ backgroundImage: `url('${imgBackUrl}')` }}
     >
       <div className="container">
-        <div className="row text-center text-lg-start">
-          <div className="col-lg-4">
-            <img src={imgUrl} className="img-fluid rounded-lg" alt="" />
+        <div className="row align-items-center justify-content-center text-center text-lg-start">
+          <div className="col-10 col-lg-4">
+            <img src={imgUrl} className="img-fluid imagenPeli" alt="" />
           </div>
-          <div className="col-lg-8 mt-4 mt-lg-0">
-            <h2>{movie.title}</h2>
-            <p>{movie.overview}</p>
+          <div className="col-lg-7 mt-4 mt-lg-0">
+            <div className="content-detail">
+              <h2>{movie.title}</h2>
+              <p>{movie.overview}</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                ratione quibusdam saepe rerum non expedita vitae vero.
+                Distinctio doloremque nesciunt enim neque blanditiis?
+              </p>
+              <div className="d-flex text-center">
+                <h5>{genero.length > 1 ? "Generos:" : "Genero:"}</h5>
+                {genero.map((item, key) => (
+                  <div key={item.id}>
+                    <span className="badge bg-info ms-2 p-2">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

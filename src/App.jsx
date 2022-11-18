@@ -7,9 +7,7 @@ import "./App.scss";
 const App = () => {
   return (
     <div>
-      <header className="text-center text-info mt-5">
-        <h1 className="display-4 fw-bold">🎬Películas</h1>
-      </header>
+      <header className="text-center">{/* <h3>Hola</h3> */}</header>
       <MyRoutes />
     </div>
   );

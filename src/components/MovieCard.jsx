@@ -1,4 +1,4 @@
-import "../components/movieCard.css";
+import "../components/movieCard.scss";
 
 // manipulamos el dom para mandar el link de la pelicula
 import { Link } from "react-router-dom";

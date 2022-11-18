@@ -3,7 +3,7 @@
 }
 body{
     color: white !important;
-    background: #1F1E2D !important;
+    background: #1a1931 !important;
 }
 .back-movie{
     width: 100%;
@@ -13,6 +13,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0rem 5rem 1rem #330662;
+    border-bottom: 2px solid #330662;
 }
 .back-movie .container{
     z-index: 2;
@@ -27,4 +29,24 @@ body{
  bottom: 0;
  background: linear-gradient(rgba(73, 74, 148, 0.5), rgba(0, 0, 0, 0.7));
  z-index: 0;
+}
+.imagenPeli{
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+.imagenPeli:hover{
+    transform: translateY(-5px) rotate(-2deg) scale(1.03);
+}
+.content-detail{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #330662 !important;
+    box-shadow: 0 0rem 5rem 1rem #330662;
+    border: 2px solid #330662;
+    transition: all .3s ease-in-out;
+}
+.content-detail:hover{
+    // padding: 25px;
+    transform: translateY(-10px);
+    border-bottom: 3px solid #e99800;
 }
