@@ -1,0 +1,37 @@
+.card {
+  /* width: 300px; */
+  height: 500px !important;
+  background-color: red;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 3px 5px 15px rgba(3, 32, 51, 0.3);
+}
+
+@media (max-width: 576px) {
+  .card {
+    height: 600px !important;
+  }
+}
+.content-info {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 20px;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateY(50px) scale(1.1);
+  border-radius: 5px;
+}
+.content-info a {
+  text-decoration: none;
+  color: white;
+}
+.content-info a:hover {
+  color: aqua;
+}
+.card:hover .content-info {
+  transform: translateY(0) scale(1.009);
+  opacity: 1;
+}

@@ -1,0 +1,30 @@
+.titulo{
+    color: blueviolet;
+}
+body{
+    color: white !important;
+    background: #1F1E2D !important;
+}
+.back-movie{
+    width: 100%;
+    height: auto;
+    background: no-repeat center center/cover;
+    // background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-movie .container{
+    z-index: 2;
+}
+.back-movie::before{
+ content: "";
+ position: absolute;
+ background-color: red;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(rgba(73, 74, 148, 0.5), rgba(0, 0, 0, 0.7));
+ z-index: 0;
+}
